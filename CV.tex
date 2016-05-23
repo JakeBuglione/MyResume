@@ -1,0 +1,266 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SIMPLE-RESUME-CV
+%% <https://github.com/zachscrivena/simple-resume-cv>
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INSTRUCTIONS FOR COMPILING THIS DOCUMENT ("CV.tex")
+%% TeX ---(XeLaTeX)---> PDF:
+%%
+%% Method 1: Use latexmk for fully automated document generation:
+%%   latexmk -xelatex "CV.tex"
+%%   (add the -pvc switch to automatically recompile on changes)
+%%
+%% Method 2: Use XeLaTeX directly:
+%%   xelatex "CV.tex"
+%%   (run multiple times to resolve cross-references if needed)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[a4paper,10pt,oneside]{article}
+\documentclass[letterpaper,10pt,oneside]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TYPESETTING OPTIONS.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\TypesetInNonStopMode}{1}
+\newcommand{\TypesetInDraftMode}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{CV-Preamble.tex}
+
+% CV Info (to be customized).
+\newcommand{\CVAuthor}{John Buglione}
+\newcommand{\CVTitle}{John Doe's CV for Acme Corporation}
+\newcommand{\CVNote}{CV compiled on {\today} for Acme Corporation}
+\newcommand{\CVWebpage}{http://www.jakebuglione.com}
+
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={\CVAuthor},
+pdfsubject={\CVWebpage},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={},
+pdfpagemode={},
+bookmarks=true,
+unicode=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+
+% Shorthand.
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+
+\title{\CVAuthor}
+
+\begin{subtitle}
+\href{https://goo.gl/maps/3NSdCdpbAW32}
+{307 S 41\textsuperscript{st} St, Apt 3F, Philadelphia, Pennsylvania 19104, USA}
+\par
+\href{mailto:arom1029@gmail.com}
+{arom1029@gmail.com}
+\,\SubBulletSymbol\,
++1\,(732)\,570-3618
+\,\SubBulletSymbol\,
+\href{\CVWebpage}
+{\CVWebpage}
+\end{subtitle}
+
+\begin{body}
+
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\section
+{Education}
+{Education}
+{PDF:Education}
+
+\href{http://www.upenn.edu}
+{\textbf{University of Pennsylvania}},
+Philadelphia, Pennsylvania, USA
+
+\GapNoBreak
+\BulletItem
+Master of Engineering (M.E.) in
+\href{http://www.grasp.upenn.edu}
+{Robotics}
+\hfill
+\DatestampYMD{2014}{09}{15} --
+\DatestampYMD{2016}{05}{15}
+\begin{detail}
+\SubBulletItem
+Thesis:
+\href{http://www.jakebuglione.com/thesis}
+{Use of Compton Backscatter X-Ray Imaging in Agriculture}
+\SubBulletItem
+Adviser:
+Dr. C. J. Taylor
+\SubBulletItem
+Research areas:
+Image Processing, Robotics, Precision Agriculture.
+\end{detail}
+
+
+
+\BigGap
+\href{http://www.villanova.edu}
+{\textbf{Villanova University}},
+Villanova, Pennsylvania, USA
+
+\GapNoBreak
+\BulletItem
+Bachelor of Science (B.S.) in
+\href{https://www1.villanova.edu/villanova/engineering/undergrad/majors/electrical.html}
+{Electrical Engineering}
+\hfill
+\DatestampYMD{2010}{09}{15} --
+\DatestampYMD{2014}{05}{15}
+\begin{detail}
+\SubBulletItem
+Minors in Computer Science and Japanese
+\SubBulletItem
+Graduated Cum Laude
+\SubBulletItem
+Villanova Endowed Scholar
+\SubBulletItem
+US Department of State Critical Language Scholarship Winner 2014
+\end{detail}
+
+%%%%%%%%%%%%%%%
+%% Skills    %%
+%%%%%%%%%%%%%%%
+\section{Skills Summary}{Skills Summary}{PDF:SkillsSummary}
+\begin{multicols}{3}
+\begin{flushleft}
+\begin{itemize}
+    \item Proficient in software development using C, Java, Python, Ruby, and MATLAB.
+    \item Proficient HTML and CSS web design skills
+    \item General Office Skills
+    \item Familiar with Signal Processing and Computer Vision Techniques
+    \item Familiar with Machine Learning and Data Analytics Techniques
+    \item Experience with Autonomous Aerial Vehicles and Aerial Robotics
+    \item Familiar with robotic vision navigation techniques (SLAM, Optical Flow, Visual Odometry)
+    
+\end{itemize}
+\end{flushleft}
+\end{multicols}
+\BigGap
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Work History %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Work History}
+{Work History}
+{PDF:WorkHistory}
+
+\href{http://clscholarship.org/}
+{\textbf{Critical Language Scholarship}},
+Participant
+
+\GapNoBreak
+\BulletItem
+Critical Language Scholarship, Himeji, Hyogo Prefecture, Japan
+\hfill
+\DatestampY{2014}
+\begin{detail}
+\SubBulletItem
+Participated in a program focused on creating ties between Japanese and American nationals through the study of the Japanese language and various cultural enrichment activities. Worked in teams completing a variety of projects in the local community
+
+\end{detail}
+\vspace{5mm}
+
+\href{http://zondlo.princeton.edu/}
+{\textbf{MIRTHE}},
+Research Intern
+
+\GapNoBreak
+\BulletItem
+Zondlo Lab, Princeton University, Princeton NJ
+\hfill
+\DatestampY{2013}
+\begin{detail}
+\SubBulletItem
+Worked as a research assistant building an autonomous aerial vehicle sensor platform. The sensor platform is to be used to survey methane emissions at natural gas hydraulic fracturing sites.
+\end{detail}
+
+\BulletItem
+Zondlo Lab, Princeton University, Princeton NJ
+\hfill
+\DatestampY{2012}
+\begin{detail}
+\SubBulletItem
+Worked as a research assistant doing work in the field of mid-infrared laser spectroscopy. While working, I assisted in improving an automated, field deployable, gas sensor system.
+\end{detail}
+
+\vspace{5mm}
+
+\href{http://www.alltest.net/}
+{\textbf{Alltest Instruments}},
+Instrument Calibration and Service Technician
+
+\GapNoBreak
+\BulletItem
+Farmingdale, NJ
+\hfill
+\DatestampY{2011}
+\begin{detail}
+\SubBulletItem
+Worked as a technician diagnosing and repairing electronic test equipment such as, but not limited to; multimeters, oscilloscopes, spectrum analyzers, network analyzers, power supplies, and frequency counters.
+
+\end{detail}
+
+\vspace{5mm}
+
+\href{http://www.alltest.net/}
+{\textbf{Delaire USA}},
+Technical Intern
+
+\GapNoBreak
+\BulletItem
+Manasquan, NJ
+\hfill
+\DatestampY{2010}
+\begin{detail}
+\SubBulletItem
+Worked as a technical assistant creating custom RF and fiber optic cables.
+\end{detail}
+\end{body}
+
+%%%%%%%%%%%
+% CV NOTE %
+%%%%%%%%%%%
+
+%\begin{flushright}
+%\UseNoteFont%
+%[\textit{\CVNote}]%
+%\hspace{2.0mm}\null
+%\end{flushright}
+
+\label{LastPage}~
+\end{document}
